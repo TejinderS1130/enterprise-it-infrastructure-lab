@@ -11,14 +11,14 @@
 
 ##  Overview
 
-This project simulates a **real-world enterprise IT environment** designed for:
+This project simulates a real-world enterprise IT environment designed for:
 
 - System deployment and configuration  
 - Network troubleshooting and diagnostics  
 - Endpoint monitoring and issue resolution  
 - Security testing and SOC-based detection workflows  
 
- Built to reflect **real IT operations and field service environments**, not isolated lab exercises.
+Built to reflect real IT operations and field service environments, not isolated lab exercises.
 
 ---
 
