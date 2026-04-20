@@ -35,11 +35,6 @@ Develop hands-on experience in:
 
 ##  Architecture Diagram
 
-<p align="center">
-  <img src="./architecture/architecture-diagram.png" width="900"/>
-</p>
-
----
 
 ##  Environment Setup
 
