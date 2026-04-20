@@ -1,164 +1,275 @@
-# Enterprise IT Infrastructure Lab (SOC + Offensive Testing)
+#  Enterprise IT Infrastructure Lab (SOC + Offensive Testing)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Lab-Kali%20%7C%20Windows-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Lab-Kali%20Linux%20%7C%20Windows%2010-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Focus-IT%20Operations%20%2B%20Security-orange?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Environment-Virtualized-black?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Level-Enterprise%20Simulation-success?style=for-the-badge"/>
 </p>
 
 ---
 
-## Objective
+##  Overview
 
-Build a controlled enterprise lab environment to simulate **real-world IT operations, system troubleshooting, network issues, and security scenarios**.
-
----
-
-## Overview
-
-This lab represents a **multi-system enterprise environment** used for:
+This project simulates a **real-world enterprise IT environment** designed for:
 
 - System deployment and configuration  
 - Network troubleshooting and diagnostics  
 - Endpoint monitoring and issue resolution  
 - Security testing and SOC-based detection workflows  
 
----
-
-## Why This Lab Matters
-
-Unlike basic labs, this environment simulates **real enterprise infrastructure**, allowing:
-
-- Troubleshooting across multiple systems (Linux + Windows)  
-- Network issue diagnosis and resolution  
-- Authentication and system-level debugging  
-- Log-based analysis and monitoring  
-
- This reflects **real IT support + field service work**, not just theoretical labs.
+ Built to reflect **real IT operations and field service environments**, not isolated lab exercises.
 
 ---
 
-##  Lab Architecture
+##  Objective
 
-```
-Attacker (Kali Linux)
-        │
-        ▼
-Internal Virtual Network
-        │
- ┌──────────────┐
- │ Windows 10   │
- │ (Endpoint)   │
- └──────────────┘
-        │
-        ▼
-Monitoring & Analysis
-(Wireshark / Logs / SIEM)
-```
+Develop hands-on experience in:
+
+- Diagnosing and resolving system and network issues  
+- Managing endpoint environments (Windows/Linux)  
+- Performing root cause analysis using logs and system data  
+- Supporting security monitoring and incident investigation workflows  
+
+---
+
+##  Architecture Diagram
+
+<p align="center">
+  <img src="./architecture/architecture-diagram.png" width="900"/>
+</p>
 
 ---
 
 ##  Environment Setup
 
-### Systems Deployed
+###  Systems Deployed
 
-- Kali Linux (Testing / Diagnostics System)  
-- Windows 10 (Endpoint System)  
-- Internal Virtual Network  
-
----
-
-#  Kali Linux Setup
-
-## Deployment
-
-Kali Linux configured as a **testing and diagnostic system** within the environment.
+| System        | Role                          |
+|--------------|------------------------------|
+| Kali Linux   | Testing & Diagnostics System |
+| Windows 10   | Endpoint / User System       |
+| Virtual Net  | Internal Network Simulation  |
 
 ---
 
-## System Validation
+#  Kali Linux Configuration
 
-<img src="./screenshots/01-kali-desktop.png" width="900">
+##  Deployment
 
-Basic system validation performed to confirm OS functionality and configuration.
+Kali Linux deployed as a **diagnostic and testing node** used for:
 
----
-
-<img src="./screenshots/02-kali-terminal-validation.png" width="900">
-
-Commands such as `uname`, `date`, and system checks were used to verify environment readiness.
+- Network testing  
+- System validation  
+- Controlled attack simulation  
 
 ---
 
-## Snapshot Management
+##  System Validation
 
-<img src="./screenshots/03-kali-snapshot.png" width="900">
+<img src="./screenshots/01-kali-desktop.png" width="900"/>
 
-Snapshot created to ensure **system recovery and repeatable testing scenarios**.
-
----
-
-#  Windows 10 Setup
-
-## Deployment
-
-Windows 10 VM deployed as an **enterprise endpoint system** for testing and troubleshooting.
+Verified OS functionality and environment readiness.
 
 ---
 
-## Tool Installation
+<img src="./screenshots/02-kali-terminal-validation.png" width="900"/>
 
-<img src="./screenshots/04-windows-wireshark-install.png" width="900">
+Executed validation commands:
 
-Wireshark installed for **network traffic monitoring and diagnostics**.
+```
+uname -a
+date
+whoami
+```
 
----
-
-## Snapshot Management
-
-<img src="./screenshots/05-windows-snapshot.png" width="900">
-
-Snapshot created to maintain a stable baseline configuration.
+Ensured proper system configuration and operational stability.
 
 ---
 
-##  IT Operations Use Cases
+##  Snapshot Management
 
-This lab enables hands-on experience with:
+<img src="./screenshots/03-kali-snapshot.png" width="900"/>
 
-- Diagnosing network connectivity issues (DNS, IP, routing)  
-- Troubleshooting system performance and stability issues  
-- Investigating authentication failures across systems  
-- Endpoint monitoring and issue resolution  
-- Log-based root cause analysis  
+Snapshot created to support:
+
+- Rollback capability  
+- Stable baseline  
+- Repeatable scenarios  
 
 ---
 
-##  Security & SOC Integration
+#  Windows 10 Endpoint Configuration
+
+##  Deployment
+
+Windows 10 deployed as an **enterprise endpoint system** to simulate:
+
+- User environment  
+- Application usage  
+- System-level troubleshooting scenarios  
+
+---
+
+##  Tool Installation
+
+<img src="./screenshots/04-windows-wireshark-install.png" width="900"/>
+
+Wireshark installed for:
+
+- Packet inspection  
+- Network diagnostics  
+- Traffic analysis  
+
+---
+
+##  Snapshot Management
+
+<img src="./screenshots/05-windows-snapshot.png" width="900"/>
+
+Maintains a consistent baseline for testing and recovery.
+
+---
+
+#  IT Operations Use Cases
+
+This lab enables real-world troubleshooting scenarios:
+
+###  System & Endpoint
+- OS configuration and validation  
+- Performance troubleshooting  
+- Application-level issue diagnosis  
+
+###  Networking
+- DNS resolution issues  
+- IP misconfiguration  
+- Connectivity failures  
+- Network diagnostics using Ping / Tracert  
+
+###  Authentication & Access
+- Login failures  
+- Account issues  
+- System access troubleshooting  
+
+###  Root Cause Analysis
+- Log-based investigation  
+- Cross-system issue correlation  
+- Failure pattern identification  
+
+---
+
+#  Real-World Troubleshooting Scenario
+
+##  Incident: Endpoint Unable to Access Network
+
+###  Issue
+A Windows 10 endpoint was unable to access internal and external network resources.
+
+---
+
+### 🔍 Initial Symptoms
+
+- No internet connectivity  
+- Unable to ping gateway  
+- Applications failing to load  
+- Network status showed "Unidentified Network"  
+
+---
+
+###  Investigation Steps
+
+1. Checked IP configuration:
+   ```
+   ipconfig
+   ```
+   → No valid IP address assigned  
+
+2. Tested connectivity:
+   ```
+   ping 8.8.8.8
+   ```
+   → Request timed out  
+
+3. Verified network adapter  
+   → Adapter enabled, no hardware issue  
+
+4. Checked DHCP assignment  
+   → No IP received from DHCP server  
+
+---
+
+###  Root Cause
+
+DHCP failure prevented the system from obtaining a valid IP address, resulting in complete network disconnection.
+
+---
+
+###  Resolution
+
+```
+ipconfig /release
+ipconfig /renew
+```
+
+- Restarted network adapter  
+- Verified correct IP assignment  
+
+---
+
+###  Outcome
+
+- Network connectivity restored  
+- System successfully accessed internal and external resources  
+- Issue resolved without escalation  
+
+---
+
+###  Skills Demonstrated
+
+- Network troubleshooting  
+- Endpoint diagnostics  
+- Root cause analysis  
+- Command-line troubleshooting  
+- Incident resolution workflow  
+
+---
+
+#  Security & SOC Integration
 
 This environment also supports:
 
-- Attack simulation (brute force, scanning, exploitation)  
-- Threat detection and log analysis  
+- Attack simulation (brute force, scanning)  
+- Threat detection and monitoring  
 - SIEM integration (Splunk)  
 - Incident investigation workflows  
 
 ---
 
-##  Related Projects
+#  Related Projects
 
 - Enterprise Authentication Attack Detection (Splunk SIEM)  
+- Credential Access Detection & Response (Defender XDR)  
 - Threat Hunting & Detection Engineering Labs  
 
 ---
 
-##  Key Takeaway
+#  Key Takeaways
 
-This lab demonstrates the ability to:
-
-✔ Deploy and manage systems  
+✔ Deploy and manage enterprise systems  
 ✔ Troubleshoot real-world IT issues  
-✔ Analyze system and network behavior  
+✔ Diagnose network and endpoint problems  
+✔ Perform root cause analysis using logs  
 ✔ Integrate security monitoring into operations  
+
+---
+
+##  Value for IT & SOC Roles
+
+This lab highlights capabilities relevant to:
+
+- IT Support / Field Services  
+- System Administration  
+- Network Troubleshooting  
+- SOC Analyst / Security Operations  
 
 ---
