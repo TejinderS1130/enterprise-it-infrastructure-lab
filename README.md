@@ -1,4 +1,4 @@
-#  Enterprise IT Infrastructure Lab (SOC + Offensive Testing)
+# Enterprise IT Infrastructure Lab (IT Operations, Troubleshooting & SOC)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Lab-Kali%20Linux%20%7C%20Windows%2010-blue?style=for-the-badge"/>
@@ -33,8 +33,24 @@ Develop hands-on experience in:
 
 ---
 
-##  Architecture Diagram
+##  Lab Architecture
 
+```text
+[Kali Linux (Diagnostics / Testing)]
+                |
+                v
+        [Virtual Network Layer]
+                |
+      +---------+---------+
+      v                   v
+[Windows 10 Endpoint]   [Splunk / Logs]
+        (User System)      (Monitoring)
+                |
+                v
+        [Wireshark Analysis]
+
+```
+---
 
 ##  Environment Setup
 
@@ -162,7 +178,7 @@ A Windows 10 endpoint was unable to access internal and external network resourc
 
 ---
 
-### 🔍 Initial Symptoms
+###  Initial Symptoms
 
 - No internet connectivity  
 - Unable to ping gateway  
